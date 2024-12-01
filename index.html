@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamento de Projétil</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+
+        header {
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #894caf;
+            color: white;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .content {
+            padding-top: 10px;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            width: 90%;
+            height: 800px; 
+        }
+
+        .text {
+            width: 90%;
+            margin: 20px auto;
+            text-align: left;
+            color: #ffffff;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 10px;
+            text-align: center;
+            background-color: #894caf;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <h3>Lançamento de Projétil</h3>
+    </header>
+    <div class="content">
+        <iframe src="https://editor.p5js.org/GiPaiva/full/ttZOmPCiI" style="width: 80%; height: 1000px; overflow: auto;"></iframe>
+        <p class="text">
+            Link da aplicação, para melhor visualização<br>
+            <a href="https://editor.p5js.org/GiPaiva/full/ttZOmPCiI">https://editor.p5js.org/GiPaiva/full/ttZOmPCiI</a>
+        </p>
+        <div class="text">
+          <h2>Fórmulas e Conceitos Utilizados:</h2>
+          
+          <h3>1. Força de Arrasto</h3>
+          <p>A força de arrasto que a flecha sofre ao se mover pelo ar é dada pela fórmula:</p>
+          <pre>F<sub>d</sub> = (1/2) * C<sub>d</sub> * ρ * A * v<sup>2</sup></pre>
+          <p>Onde:</p>
+          <ul>
+              <li><strong>C<sub>d</sub></strong>: Coeficiente de arrasto (0.2, conforme definido no código)</li>
+              <li><strong>ρ</strong>: Densidade do ar (1.225 kg/m<sup>3</sup>)</li>
+              <li><strong>A</strong>: Área da seção transversal da flecha (π * D<sup>2</sup> / 4, com D sendo o diâmetro)</li>
+              <li><strong>v</strong>: Velocidade da flecha</li>
+          </ul>
+      
+          <h3>2. Força de Gravidade</h3>
+          <p>A força de gravidade que age sobre a flecha é dada pela fórmula:</p>
+          <pre>F<sub>g</sub> = m * g</pre>
+          <p>Onde:</p>
+          <ul>
+              <li><strong>m</strong>: Massa da flecha (5 kg)</li>
+              <li><strong>g</strong>: Aceleração devido à gravidade (9.81 m/s<sup>2</sup>)</li>
+          </ul>
+      
+          <h3>3. Equações do Movimento</h3>
+          <p>As equações do movimento são aplicadas para atualizar a posição e a velocidade da flecha a cada instante de tempo:</p>
+          <pre>v<sub>x</sub> = v<sub>x0</sub> + a<sub>x</sub> * Δt</pre>
+          <pre>v<sub>y</sub> = v<sub>y0</sub> + a<sub>y</sub> * Δt</pre>
+          <pre>x = x<sub>0</sub> + v<sub>x</sub> * Δt</pre>
+          <pre>y = y<sub>0</sub> + v<sub>y</sub> * Δt</pre>
+          <p>Onde:</p>
+          <ul>
+              <li><strong>v<sub>x</sub> e v<sub>y</sub></strong>: Componentes da velocidade nos eixos x e y</li>
+              <li><strong>a<sub>x</sub> e a<sub>y</sub></strong>: Componentes da aceleração nos eixos x e y devido ao arrasto e à gravidade</li>
+              <li><strong>x e y</strong>: Posições da flecha nos eixos x e y</li>
+              <li><strong>Δt</strong>: Intervalo de tempo (0.01 s)</li>
+          </ul>
+      
+          <h3>4. Ponto mais Alto</h3>
+          <p>O ponto mais alto do lançamento ocorre quando a velocidade vertical se torna negativa (ou seja, quando a flecha começa a descer). A posição no tempo é registrada nesse instante.</p>
+      
+          <h3>5. Impacto com o Creeper</h3>
+          <p>A colisão da flecha com o "Creeper" é detectada verificando a interseção entre a área da flecha e a área do "Creeper" na tela. Se a colisão ocorrer, o "Creeper" é machucado, e o jogador ganha pontos.</p>
+      
+          <h2>Sobre o Jogo</h2>
+          <p>O jogo foi desenvolvido com a temática de Minecraft, com o objetivo de ensinar conceitos de física relacionados ao lançamento de projéteis.</p>
+          <p>Créditos das imagens: Mojang</p>
+          <p>Desenvolvido por: Giovanna Paiva</p>
+          <p>Professor: Ricardo Dalke</p>
+          <p>Curso: Ciência da Computação, 4° semestre</p>
+      </div>
+    </div>
+    <footer>
+      <h3>Lançamento de Projetil - Trabalho de Fisica - Projeto Extensivo - SENAC - BCC</h3>
+    </footer>
+</body>
+</html>
